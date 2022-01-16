@@ -1,1 +1,37 @@
+import java.util.Scanner;
 
+public class Quiz {
+
+	public static void main(String[] args) {
+		
+		Scanner scanMe = new Scanner(System.in);
+
+		double salary;
+		int year;
+		double netbonus;
+		
+		System.out.print("Please enter your salary: RM");
+		salary = scanMe.nextDouble();
+		
+		System.out.print("Please enter how many years of service: ");
+		year = scanMe.nextInt();
+		
+		if(year > 5) {
+			netbonus = (salary*0.05);
+			System.out.println("Total net bonus amount: RM" + netbonus);
+		}else if(year<5) {
+			System.out.println("No bonus");
+		}
+		
+		double highestSalary = salary*20;
+		double lowestSalary = salary*30;
+		System.out.println("Highest salary: RM" + highestSalary);
+		System.out.println("Lowest salary: RM" + lowestSalary);
+		
+		int youngest = 1;
+		int oldest =2 ;
+		System.out.println("Youngest:" + youngest);
+		System.out.println("Oldest:" + oldest);
+	}
+
+}
